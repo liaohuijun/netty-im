@@ -1,0 +1,59 @@
+spring.application.name=netty-im
+spring.jackson.serialization.write-dates-as-timestamps=true
+
+# JDBC
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+# SSH
+cn.sqdyy.ssh.host=
+cn.sqdyy.ssh.mysql=
+cn.sqdyy.ssh.port=
+cn.sqdyy.ssh.user=
+cn.sqdyy.ssh.password=
+
+# Hikari will use the above plus the following to setup connection pooling
+spring.datasource.type=com.zaxxer.hikari.HikariDataSource
+spring.datasource.hikari.connection-timeout=30000
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.maximum-pool-size=15
+spring.datasource.hikari.auto-commit=true
+spring.datasource.hikari.idle-timeout=600000
+spring.datasource.hikari.pool-name=DatebookHikariCP
+spring.datasource.hikari.max-lifetime=28740000
+spring.datasource.hikari.connection-test-query=SELECT 1
+
+# HTTPS
+server.port=8080
+#server.ssl.key-store=classpath:netty-im.keystore
+#server.ssl.key-store-password=
+#server.ssl.key-store-type=JKS
+#server.ssl.key-alias=tomcat
+server.tomcat.uri-encoding=UTF-8
+
+# logging
+logging.level.root=warn
+
+# Mybatis
+mybatis.type-aliases-package=cn.sqdyy.pojo
+mybatis.mapper-locations=classpath:mapper/*.xml
+# logging.level.cn.sqdyy.mapper=debug
+# ͨ�� mapper
+mapper.mappers=cn.sqdyy.utils.MyMapper
+mapper.not-empty=false
+mapper.identity=MYSQL
+# ��ҳ�������
+pagehelper.helperDialect=mysql
+pagehelper.supportMethodsArguments=true
+pagehelper.params=count=countSql
+
+# fdfs
+fdfs.soTimeout=1501
+fdfs.connectTimeout=601
+fdfs.thumbImage.width=80
+fdfs.thumbImage.height=80
+fdfs.trackerList[0]=
+
+

@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<button bindtap='sendMsg'>发送消息</button>
+<button bindtap='dataContentSign'>消息上报</button>
+<button bindtap='getNewCharList'>获取会话列表</button>
+<button bindtap='getCharList'>获取与100002的聊天记录</button>
